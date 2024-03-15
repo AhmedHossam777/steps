@@ -11,14 +11,14 @@ const App = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   const handleNext = () => {
-    if (step < 3) setStep(step + 1);
+    if (step < 3) setStep((s) => s + 1);
   };
   const handlePrevious = () => {
-    if (step > 1) setStep(step - 1);
+    if (step > 1) setStep((s)=> s - 1);
   };
 
   const handleClose = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((o) => !o); // toggle the value of isOpen
   };
 
   return (
